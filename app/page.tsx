@@ -1,12 +1,25 @@
-import Image from "next/image";
+import Button from "./components/Button";
+import ComplexityComponent from "./components/ComplexityComponent";
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="h-lvh w-lvw flex flex-col flex-wrap">
-      <div className="w-4/5 h-4/5 bg-gray-200">Main Function</div>
-      <div className="w-4/5 h-1/5 bg-orange-200">Function Function</div>
-      <div className="w-1/5 h-1/5 bg-blue-200">Space-Time function</div>
-      <div className="w-1/5 h-4/5 bg-red-200">Coding function</div>
-    </main>
+    <>
+      <main className="">
+        <header className="h-8 bg-red-100"></header>
+        <section className="flex flex-col h-dvh">
+          <div className="relative w-full h-2/5 bg-zinc-200">
+            <div className="absolute bottom-0 right-0">
+              <ComplexityComponent />
+            </div>
+          </div>
+          <div className="w-full h-2/5 bg-green-200"></div>
+          <div className="w-full h-1/5 bg-orange-100">
+						<Button>Add an Item</Button>
+            <button>Add An Item</button>
+          </div>
+        </section>
+        <footer className="w-full h-8 bg-red-100"></footer>
+      </main>
+    </>
   );
 }
